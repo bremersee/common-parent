@@ -18,7 +18,7 @@ pipeline {
         sh 'mvn -P deploy deploy'
       }
     }
-    stage('Deploy') {
+    stage('Deploy Release') {
       when {
         anyOf {
           branch 'master'
