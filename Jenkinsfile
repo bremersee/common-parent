@@ -12,11 +12,20 @@ pipeline {
       when {
         anyOf {
           branch 'develop'
-          branch 'master'
         }
       }
       steps {
         sh 'mvn -P deploy deploy'
+      }
+    }
+    stage('Deploy Release') {
+      when {
+        anyOf {
+          branch 'master'
+        }
+      }
+      steps {
+        sh 'mvn -P deploy,release deploy'
       }
     }
     stage('Site') {
