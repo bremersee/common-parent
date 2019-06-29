@@ -91,10 +91,12 @@
   </issueManagement>
 
   <distributionManagement>
+    <!--
     <repository>
       <id>bremersee-releases</id>
       <url>https://nexus.bremersee.org/repository/maven-releases</url>
     </repository>
+    -->
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -297,6 +299,14 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
