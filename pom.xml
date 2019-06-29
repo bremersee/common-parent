@@ -34,6 +34,7 @@
     <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
     <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
+    <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
     <plantuml.version>1.2018.11</plantuml.version>
     <wagon-webdav-jackrabbit.version>3.0.0</wagon-webdav-jackrabbit.version>
     <wagon-ssh-external.version>3.0.0</wagon-ssh-external.version>
@@ -91,10 +92,12 @@
   </issueManagement>
 
   <distributionManagement>
+    <!--
     <repository>
       <id>bremersee-releases</id>
       <url>https://nexus.bremersee.org/repository/maven-releases</url>
     </repository>
+    -->
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -297,6 +300,11 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven-deploy-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
