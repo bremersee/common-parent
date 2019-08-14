@@ -36,10 +36,10 @@
     <maven-site-plugin.version>3.8.2</maven-site-plugin.version>
     <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
     <wagon-maven-plugin.version>2.0.0</wagon-maven-plugin.version>
-    <wagon-http.version>3.3.3</wagon-http.version>
-    <wagon-ssh.version>3.3.3</wagon-ssh.version>
-    <wagon-ssh-external.version>3.3.3</wagon-ssh-external.version>
-    <wagon-webdav-jackrabbit.version>3.3.3</wagon-webdav-jackrabbit.version>
+    <wagon-http.version>3.3.1</wagon-http.version>
+    <wagon-ssh.version>3.3.1</wagon-ssh.version>
+    <wagon-ssh-external.version>3.3.1</wagon-ssh-external.version>
+    <wagon-webdav-jackrabbit.version>3.3.1</wagon-webdav-jackrabbit.version>
     <plantuml.version>1.2018.11</plantuml.version>
     <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <jacoco-maven-plugin>0.8.3</jacoco-maven-plugin>
