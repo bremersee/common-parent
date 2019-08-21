@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -33,11 +33,11 @@
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
-    <maven-site-plugin.version>3.7.1</maven-site-plugin.version>
+    <maven-site-plugin.version>3.8.2</maven-site-plugin.version>
     <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
-    <plantuml.version>1.2018.11</plantuml.version>
-    <wagon-webdav-jackrabbit.version>3.0.0</wagon-webdav-jackrabbit.version>
-    <wagon-ssh-external.version>3.0.0</wagon-ssh-external.version>
+    <wagon-maven-plugin.version>2.0.0</wagon-maven-plugin.version>
+    <wagon.version>3.2.0</wagon.version>
+    <!-- <plantuml.version>1.2018.11</plantuml.version> -->
     <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <jacoco-maven-plugin>0.8.3</jacoco-maven-plugin>
     <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
@@ -148,6 +148,39 @@
   </dependencies>
 
   <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-provider-api</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-file</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-http-shared</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-http</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+        <version>${wagon.version}</version>
+      </extension>
+    </extensions>
+
     <pluginManagement>
       <plugins>
         <plugin>
@@ -252,6 +285,7 @@
           <configuration>
             <generateReports>true</generateReports>
           </configuration>
+          <!--
           <dependencies>
             <dependency>
               <groupId>net.sourceforge.plantuml</groupId>
@@ -269,6 +303,7 @@
               <version>${wagon-webdav-jackrabbit.version}</version>
             </dependency>
           </dependencies>
+          -->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -310,6 +345,11 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>wagon-maven-plugin</artifactId>
+          <version>${wagon-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
