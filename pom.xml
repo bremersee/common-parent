@@ -14,6 +14,7 @@
   <url>https://github.com/bremersee/common-parent</url>
 
   <properties>
+    <github.repo>${project.artifactId}</github.repo>
     <github.global.server>github</github.global.server>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -36,10 +37,10 @@
     <maven-surefire-plugin.version>3.0.0-M3</maven-surefire-plugin.version>
     <maven-javadoc-plugin.version>3.1.0</maven-javadoc-plugin.version>
     <maven-site-plugin.version>3.8.2</maven-site-plugin.version>
+    <maven-scm-publish-plugin.version>3.0.0</maven-scm-publish-plugin.version>
     <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
     <wagon-maven-plugin.version>2.0.0</wagon-maven-plugin.version>
     <wagon.version>3.2.0</wagon.version>
-    <!-- <plantuml.version>1.2018.11</plantuml.version> -->
     <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
     <jacoco-maven-plugin>0.8.3</jacoco-maven-plugin>
     <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
@@ -83,13 +84,13 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/bremersee/common-parent</url>
-    <connection>scm:git:git://github.com/bremersee/common-parent.git</connection>
-    <developerConnection>scm:git:git@github.com:bremersee/common-parent.git</developerConnection>
+    <url>https://github.com/bremersee/${github.repo}</url>
+    <connection>scm:git:git://github.com/bremersee/${github.repo}.git</connection>
+    <developerConnection>scm:git:git@github.com:bremersee/${github.repo}.git</developerConnection>
   </scm>
 
   <issueManagement>
-    <url>https://github.com/bremersee/common-parent/issues</url>
+    <url>https://github.com/bremersee/${github.repo}/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -107,7 +108,7 @@
     <site>
       <id>bremersee-sites</id>
       <url>
-        dav:https://nexus.bremersee.org/repository/maven-sites/common-parent/${project.version}
+        dav:https://nexus.bremersee.org/repository/maven-sites/${github.repo}/${project.version}
       </url>
     </site>
   </distributionManagement>
@@ -308,25 +309,11 @@
           <configuration>
             <generateReports>true</generateReports>
           </configuration>
-          <!--
-          <dependencies>
-            <dependency>
-              <groupId>net.sourceforge.plantuml</groupId>
-              <artifactId>plantuml</artifactId>
-              <version>${plantuml.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.maven.wagon</groupId>
-              <artifactId>wagon-ssh-external</artifactId>
-              <version>${wagon-ssh-external.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>org.apache.maven.wagon</groupId>
-              <artifactId>wagon-webdav-jackrabbit</artifactId>
-              <version>${wagon-webdav-jackrabbit.version}</version>
-            </dependency>
-          </dependencies>
-          -->
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-scm-publish-plugin</artifactId>
+          <version>${maven-scm-publish-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -535,6 +522,30 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>gh-pages-site</id>
+      <distributionManagement>
+        <site>
+          <id>github</id>
+          <url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</url>
+        </site>
+      </distributionManagement>
+      <build>
+        <plugins>
+          <!-- see https://github.com/opengeospatial/cite/wiki/How-to-create-releases-with-Maven -->
+          <!-- mvn clean package site site:stage scm-publish:publish-scm -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-scm-publish-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+              <scmBranch>gh-pages</scmBranch>
+            </configuration>
           </plugin>
         </plugins>
       </build>

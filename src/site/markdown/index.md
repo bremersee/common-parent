@@ -1,3 +1,3 @@
-# common-parent
+# Common Maven Parent Module
 
-Common parent module.
+Common parent module for bremersee maven projects.
