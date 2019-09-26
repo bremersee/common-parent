@@ -6,4 +6,4 @@ Common parent module of bremersee maven projects.
 
 - [Release](https://bremersee.github.io/common-parent/index.html)
 
-- [Snapshot](https://nexus.bremersee.org/repository/maven-sites/common-parent/1.0.4/index.html)
+- [Snapshot](https://nexus.bremersee.org/repository/maven-sites/common-parent/1.0.5/index.html)
