@@ -7,7 +7,7 @@
   <parent>
     <artifactId>common-parent</artifactId>
     <groupId>org.bremersee</groupId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
   </parent>
 
   <artifactId>common-service-parent</artifactId>
@@ -17,7 +17,6 @@
   <description>Common parent module of spring boot services.</description>
 
   <properties>
-    <github.repo>${parent.artifactId}</github.repo>
     <!-- Higher versions of dockerfile maven plugin cause errors (tested to version 1.4.10) -->
     <dockerfile-maven-plugin.version>1.4.6</dockerfile-maven-plugin.version>
     <dockerfile.skip>true</dockerfile.skip>

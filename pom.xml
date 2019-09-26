@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -18,7 +18,18 @@
   </modules>
 
   <properties>
-    <github.repo>${project.artifactId}</github.repo>
+    <!--
+      GitHub gh-pages support:
+      In a sub project set
+      1) 'github.repo' to the name of the repository and
+      2) 'gh-pages-staging-dir' either to '${maven.multiModuleProjectDirectory}/target/staging'
+         if you have a multi module project or to '${project.build.directory}/staging' if you have
+         a normal maven project.
+    -->
+    <github.repo>common-parent</github.repo>
+    <!--suppress UnresolvedMavenProperty -->
+    <gh-pages-staging-dir>${maven.multiModuleProjectDirectory}/target/staging</gh-pages-staging-dir>
+
     <github.global.server>github</github.global.server>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -33,6 +44,7 @@
     <swagger-annotations.version>1.5.22</swagger-annotations.version>
 
     <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+    <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
     <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
     <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
     <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
@@ -88,13 +100,13 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/bremersee/${github.repo}</url>
-    <connection>scm:git:git://github.com/bremersee/${github.repo}.git</connection>
-    <developerConnection>scm:git:git@github.com:bremersee/${github.repo}.git</developerConnection>
+    <url>https://github.com/bremersee/common-parent</url>
+    <connection>scm:git:git://github.com/bremersee/common-parent.git</connection>
+    <developerConnection>scm:git:git@github.com:bremersee/common-parent.git</developerConnection>
   </scm>
 
   <issueManagement>
-    <url>https://github.com/bremersee/${github.repo}/issues</url>
+    <url>https://github.com/bremersee/common-parent/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -112,7 +124,7 @@
     <site>
       <id>bremersee-sites</id>
       <url>
-        dav:https://nexus.bremersee.org/repository/maven-sites/${github.repo}/${project.version}
+        dav:https://nexus.bremersee.org/repository/maven-sites/common-parent/${project.version}
       </url>
     </site>
   </distributionManagement>
@@ -206,6 +218,11 @@
 
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven-enforcer-plugin.version}</version>
+        </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
@@ -397,6 +414,41 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-versions</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <bannedPlugins>
+                  <level>WARN</level>
+                  <excludes>
+                    <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                  </excludes>
+                  <message>
+                    Please consider using the maven-invoker-plugin
+                    (http://maven.apache.org/plugins/maven-invoker-plugin/)!
+                  </message>
+                </bannedPlugins>
+                <requireMavenVersion>
+                  <version>3.3.1</version>
+                  <message>Invalid Maven version. It should, at least, be 3.3.1</message>
+                </requireMavenVersion>
+                <requireJavaVersion>
+                  <version>1.8</version>
+                  <message>Invalid Java version. It should, at least, be 1.8</message>
+                </requireJavaVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
       <plugin>
@@ -535,18 +587,29 @@
       <id>gh-pages-site</id>
       <distributionManagement>
         <site>
-          <id>bremersee-sites</id>
-          <url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</url>
+          <id>github</id>
+          <url>dav:https://bremersee.github.io/${github.repo}</url>
         </site>
       </distributionManagement>
       <build>
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>${maven-site-plugin.version}</version>
+            <configuration>
+              <generateReports>true</generateReports>
+              <stagingDirectory>${gh-pages-staging-dir}</stagingDirectory>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-scm-publish-plugin</artifactId>
             <extensions>true</extensions>
             <configuration>
+              <pubScmUrl>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</pubScmUrl>
               <scmBranch>gh-pages</scmBranch>
+              <content>${gh-pages-staging-dir}</content>
             </configuration>
           </plugin>
         </plugins>
