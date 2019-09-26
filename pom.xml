@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>1.0.6</version>
+  <version>1.0.7</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -59,9 +59,6 @@
 
     <check-style-location>google_checks.xml</check-style-location>
     <checkstyle.version>8.18</checkstyle.version>
-    <site-url>
-      dav:https://nexus.bremersee.org/repository/maven-sites/${github.repo}/${project.version}
-    </site-url>
   </properties>
 
   <developers>
@@ -114,7 +111,9 @@
     </snapshotRepository>
     <site>
       <id>bremersee-sites</id>
-      <url>${site-url}</url>
+      <url>
+        dav:https://nexus.bremersee.org/repository/maven-sites/${github.repo}/${project.version}
+      </url>
     </site>
   </distributionManagement>
 
@@ -534,13 +533,14 @@
 
     <profile>
       <id>gh-pages-site</id>
-      <properties>
-        <site-url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</site-url>
-      </properties>
+      <distributionManagement>
+        <site>
+          <id>bremersee-sites</id>
+          <url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</url>
+        </site>
+      </distributionManagement>
       <build>
         <plugins>
-          <!-- see https://github.com/opengeospatial/cite/wiki/How-to-create-releases-with-Maven -->
-          <!-- mvn -P gh-pages-site clean package site site:stage scm-publish:publish-scm -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-scm-publish-plugin</artifactId>
