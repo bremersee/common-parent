@@ -533,9 +533,12 @@
 
     <profile>
       <id>gh-pages-site</id>
-      <properties>
-        <site-url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</site-url>
-      </properties>
+      <distributionManagement>
+        <site>
+          <id>bremersee-sites</id>
+          <url>scm:git:ssh://git@github.com/bremersee/${github.repo}.git</url>
+        </site>
+      </distributionManagement>
       <build>
         <plugins>
           <plugin>
