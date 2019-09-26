@@ -13,6 +13,10 @@
   <description>Bremersee's common parent</description>
   <url>https://github.com/bremersee/common-parent</url>
 
+  <modules>
+    <module>common-service-parent</module>
+  </modules>
+
   <properties>
     <github.repo>${project.artifactId}</github.repo>
     <github.global.server>github</github.global.server>
@@ -55,7 +59,6 @@
 
     <check-style-location>google_checks.xml</check-style-location>
     <checkstyle.version>8.18</checkstyle.version>
-
     <site-url>
       dav:https://nexus.bremersee.org/repository/maven-sites/${github.repo}/${project.version}
     </site-url>

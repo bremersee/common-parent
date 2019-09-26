@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>common-parent</artifactId>
+    <groupId>org.bremersee</groupId>
+    <version>1.0.6-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>common-service-parent</artifactId>
+  <packaging>pom</packaging>
+
+  <properties>
+    <github.repo>${parent.artifactId}</github.repo>
+    <!-- Higher versions of dockerfile maven plugin cause errors (tested to version 1.4.10) -->
+    <dockerfile-maven-plugin.version>1.4.6</dockerfile-maven-plugin.version>
+    <dockerfile.skip>true</dockerfile.skip>
+    <dockerfile.tag>${project.version}</dockerfile.tag>
+    <dockerfile.image>${project.artifactId}</dockerfile.image>
+    <dockerfile.repository>docker.io/bremersee/${dockerfile.image}</dockerfile.repository>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot.version}</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>repackage</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>com.spotify</groupId>
+          <artifactId>dockerfile-maven-plugin</artifactId>
+          <version>${dockerfile-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default</id>
+              <goals>
+                <goal>build</goal>
+                <goal>push</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <skip>${dockerfile.skip}</skip>
+            <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+            <repository>${dockerfile.repository}</repository>
+            <tag>${dockerfile.tag}</tag>
+            <buildArgs>
+              <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+            </buildArgs>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>dockerfile-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>dockerfile</id>
+      <properties>
+        <dockerfile.skip>false</dockerfile.skip>
+      </properties>
+    </profile>
+  </profiles>
+</project>
