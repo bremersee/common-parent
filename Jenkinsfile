@@ -8,13 +8,6 @@ pipeline {
         sh 'mvn clean install'
       }
     }
-    stage('Deploy') {
-      when {
-        anyOf {
-          branch 'develop'
-          branch 'master'
-        }
-      }
     stage('Snapshot Site') {
       when {
         branch 'develop'
@@ -31,6 +24,13 @@ pipeline {
         sh 'mvn -P gh-pages-site site site:stage scm-publish:publish-scm'
       }
     }
+    stage('Deploy') {
+      when {
+        anyOf {
+          branch 'develop'
+          branch 'master'
+        }
+      }
       steps {
         sh 'mvn -P deploy deploy'
       }
