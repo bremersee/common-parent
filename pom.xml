@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -37,7 +37,7 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2019</inceptionYear>
 
-    <spring-boot.version>2.1.8.RELEASE</spring-boot.version>
+    <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
     <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
 
     <ldaptive.version>1.2.4</ldaptive.version>
