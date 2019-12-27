@@ -2,37 +2,31 @@ pipeline {
   agent {
     label 'maven'
   }
+  tools {
+    jdk 'jdk8'
+    maven 'm3'
+  }
   stages {
+    stage('Tools') {
+      steps {
+        sh 'java -version'
+        sh 'mvn -B --version'
+      }
+    }
     stage('Build') {
       steps {
-        sh 'mvn clean install'
-      }
-    }
-    stage('Snapshot Site') {
-      when {
-        branch 'develop'
-      }
-      steps {
-        sh 'mvn site-deploy'
-      }
-    }
-    stage('Release Site') {
-      when {
-        branch 'master'
-      }
-      steps {
-        sh 'mvn -P gh-pages-site site site:stage scm-publish:publish-scm'
+        sh 'mvn -B clean install'
       }
     }
     stage('Deploy') {
       when {
         anyOf {
-          branch 'develop'
-          branch 'master'
+          branch '1.1.develop'
+          branch '1.1.master'
         }
       }
       steps {
-        sh 'mvn -P deploy deploy'
+        sh 'mvn -B -P deploy clean deploy'
       }
     }
   }
