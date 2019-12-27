@@ -29,5 +29,16 @@ pipeline {
         sh 'mvn -B -P deploy clean deploy'
       }
     }
+    stage('Site') {
+      when {
+        anyOf {
+          branch '1.1.develop'
+          branch '1.1.master'
+        }
+      }
+      steps {
+        sh 'mvn -B site-deploy'
+      }
+    }
   }
 }
