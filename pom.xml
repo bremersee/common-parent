@@ -38,8 +38,8 @@
     <inceptionYear>2019</inceptionYear>
 
     <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
-    <spring-boot-admin.version>2.2.0</spring-boot-admin.version>
-    <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+    <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
+    <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 
     <ldaptive.version>1.2.4</ldaptive.version>
     <swagger-annotations.version>1.5.24</swagger-annotations.version>
