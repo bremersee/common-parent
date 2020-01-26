@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -37,7 +37,7 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2020</inceptionYear>
 
-    <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+    <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
     <spring-boot-admin.version>2.2.1</spring-boot-admin.version>
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 
