@@ -42,6 +42,7 @@
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 
     <ldaptive.version>1.2.4</ldaptive.version>
+    <modelmapper.version>2.3.0</modelmapper.version>
     <swagger-annotations.version>1.5.24</swagger-annotations.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
@@ -177,6 +178,11 @@
         <groupId>org.ldaptive</groupId>
         <artifactId>ldaptive-unboundid</artifactId>
         <version>${ldaptive.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.modelmapper</groupId>
+        <artifactId>modelmapper</artifactId>
+        <version>${modelmapper.version}</version>
       </dependency>
       <dependency>
         <groupId>io.swagger</groupId>
