@@ -23,6 +23,8 @@
     <dockerfile.tag>${project.version}</dockerfile.tag>
     <dockerfile.image>${project.artifactId}</dockerfile.image>
     <dockerfile.repository>docker.io/bremersee/${dockerfile.image}</dockerfile.repository>
+
+    <springdoc-openapi-maven-plugin.version>0.2</springdoc-openapi-maven-plugin.version>
   </properties>
 
   <build>
@@ -39,6 +41,11 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.springdoc</groupId>
+          <artifactId>springdoc-openapi-maven-plugin</artifactId>
+          <version>${springdoc-openapi-maven-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>com.spotify</groupId>

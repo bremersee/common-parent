@@ -43,6 +43,7 @@
 
     <ldaptive.version>1.2.4</ldaptive.version>
     <modelmapper.version>2.3.0</modelmapper.version>
+    <springdoc.version>1.2.30</springdoc.version>
     <swagger-annotations.version>1.5.24</swagger-annotations.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
@@ -184,6 +185,43 @@
         <artifactId>modelmapper</artifactId>
         <version>${modelmapper.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-common</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-webmvc-core</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-ui</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-webflux-core</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-webflux-ui</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-data-rest</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-security</artifactId>
+        <version>${springdoc.version}</version>
+      </dependency>
+
       <dependency>
         <groupId>io.swagger</groupId>
         <artifactId>swagger-annotations</artifactId>
