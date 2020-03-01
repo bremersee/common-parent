@@ -2,5 +2,5 @@
 
 Common parent module of bremersee maven projects.
 
-[Maven Site](https://nexus.bremersee.org/repository/maven-sites/common-parent/1.1.2/index.html)
+[Maven Site](https://nexus.bremersee.org/repository/maven-sites/common-parent/1.1.4-SNAPSHOT/index.html)
 
