@@ -42,6 +42,7 @@
     <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
     <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
 
+    <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.7.2</embedded-redis.version>
     <ldaptive.version>1.2.4</ldaptive.version>
     <minio.version>7.0.2</minio.version>
@@ -196,6 +197,11 @@
         <groupId>org.modelmapper</groupId>
         <artifactId>modelmapper</artifactId>
         <version>${modelmapper.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>eu.maxschuster</groupId>
+        <artifactId>dataurl</artifactId>
+        <version>${dataurl.version}</version>
       </dependency>
 
       <dependency>
