@@ -91,7 +91,7 @@
     <maven-pmd-plugin.version>3.13.0</maven-pmd-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>8.33</checkstyle.version>
+    <checkstyle.version>8.34</checkstyle.version>
   </properties>
 
   <developers>
