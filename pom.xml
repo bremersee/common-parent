@@ -45,9 +45,7 @@
     <commons-io.version>2.8.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.7.2</embedded-redis.version>
-    <ldaptive.version>1.2.4</ldaptive.version>
-    <ldaptive-unboundid.version>1.2.4</ldaptive-unboundid.version>
-    <ldaptive2.version>2.0.1</ldaptive2.version>
+    <ldaptive.version>2.0.1</ldaptive.version>
     <minio.version>8.0.1</minio.version>
     <modelmapper.version>2.3.8</modelmapper.version>
     <springdoc.version>1.5.0</springdoc.version>
@@ -193,11 +191,6 @@
         <groupId>org.ldaptive</groupId>
         <artifactId>ldaptive-templates</artifactId>
         <version>${ldaptive.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.ldaptive</groupId>
-        <artifactId>ldaptive-unboundid</artifactId>
-        <version>${ldaptive-unboundid.version}</version>
       </dependency>
       <dependency>
         <groupId>io.minio</groupId>
