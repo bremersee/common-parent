@@ -34,7 +34,7 @@ pipeline {
     }
     stage('Snapshot Site') {
       when {
-        branch 'develop'
+        branch 'skip_develop'
       }
       steps {
         sh 'mvn -B site-deploy'
