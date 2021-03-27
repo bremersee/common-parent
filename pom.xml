@@ -38,9 +38,9 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2020</inceptionYear>
 
-    <spring-boot.version>2.4.3</spring-boot.version>
+    <spring-boot.version>2.4.4</spring-boot.version>
     <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
-    <spring-cloud.version>2020.0.1</spring-cloud.version>
+    <spring-cloud.version>2020.0.2</spring-cloud.version>
     <testcontainers.version>1.15.2</testcontainers.version>
 
     <commons-io.version>2.8.0</commons-io.version>
@@ -49,14 +49,14 @@
     <ldaptive.version>2.0.1</ldaptive.version>
     <minio.version>8.1.0</minio.version>
     <modelmapper.version>2.3.9</modelmapper.version>
-    <springdoc.version>1.5.4</springdoc.version>
+    <springdoc.version>1.5.6</springdoc.version>
     <swagger-annotations.version>1.6.2</swagger-annotations.version>
-    <swagger-annotations-v3.version>2.1.6</swagger-annotations-v3.version>
+    <swagger-annotations-v3.version>2.1.7</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-    <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
+    <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
-    <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+    <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
@@ -66,33 +66,33 @@
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
     <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
-    <maven-invoker-plugin.version>3.2.1</maven-invoker-plugin.version>
+    <maven-invoker-plugin.version>3.2.2</maven-invoker-plugin.version>
     <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
     <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
-    <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-    <maven-scm-publish-plugin.version>3.0.0</maven-scm-publish-plugin.version>
-    <maven-shade-plugin.version>3.2.2</maven-shade-plugin.version>
-    <maven-site-plugin.version>3.9.0</maven-site-plugin.version>
-    <maven-source-plugin.version>3.2.0</maven-source-plugin.version>
+    <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
+    <maven-scm-publish-plugin.version>3.1.0</maven-scm-publish-plugin.version>
+    <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
+    <maven-site-plugin.version>3.9.1</maven-site-plugin.version>
+    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-    <maven-war-plugin.version>3.2.3</maven-war-plugin.version>
-    <wagon-maven-plugin.version>2.0.0</wagon-maven-plugin.version>
-    <wagon.version>3.2.0</wagon.version>
-    <jacoco-maven-plugin>0.8.5</jacoco-maven-plugin>
+    <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
+    <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
+    <wagon.version>3.4.3</wagon.version>
+    <jacoco-maven-plugin>0.8.6</jacoco-maven-plugin>
     <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-    <build-helper-maven-plugin.version>3.1.0</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
     <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
-    <git-commit-id-plugin.version>4.0.0</git-commit-id-plugin.version>
+    <git-commit-id-plugin.version>4.0.4</git-commit-id-plugin.version>
 
     <!-- reporting -->
-    <maven-project-info-reports-plugin.version>3.0.0</maven-project-info-reports-plugin.version>
+    <maven-project-info-reports-plugin.version>3.1.1</maven-project-info-reports-plugin.version>
     <maven-surefire-report-plugin.version>3.0.0-M5</maven-surefire-report-plugin.version>
     <maven-jxr-plugin.version>3.0.0</maven-jxr-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <maven-pmd-plugin.version>3.13.0</maven-pmd-plugin.version>
+    <maven-pmd-plugin.version>3.14.0</maven-pmd-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>8.40</checkstyle.version>
+    <checkstyle.version>8.41</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
