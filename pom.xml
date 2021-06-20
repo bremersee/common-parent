@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>2.2.4</version>
+  <version>2.2.5</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -38,20 +38,20 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2020</inceptionYear>
 
-    <spring-boot.version>2.4.5</spring-boot.version>
+    <spring-boot.version>2.4.7</spring-boot.version>
     <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
-    <spring-cloud.version>2020.0.2</spring-cloud.version>
+    <spring-cloud.version>2020.0.3</spring-cloud.version>
     <testcontainers.version>1.15.3</testcontainers.version>
 
     <commons-io.version>2.8.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.7.3</embedded-redis.version>
     <ldaptive.version>2.0.1</ldaptive.version>
-    <minio.version>8.1.0</minio.version>
-    <modelmapper.version>2.3.9</modelmapper.version>
-    <springdoc.version>1.5.6</springdoc.version>
+    <minio.version>8.2.2</minio.version>
+    <modelmapper.version>2.4.4</modelmapper.version>
+    <springdoc.version>1.5.9</springdoc.version>
     <swagger-annotations.version>1.6.2</swagger-annotations.version>
-    <swagger-annotations-v3.version>2.1.7</swagger-annotations-v3.version>
+    <swagger-annotations-v3.version>2.1.9</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
@@ -92,7 +92,7 @@
     <maven-pmd-plugin.version>3.14.0</maven-pmd-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>8.41</checkstyle.version>
+    <checkstyle.version>8.43</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
