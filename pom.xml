@@ -53,6 +53,7 @@
     <mapstruct.version>1.4.2.Final</mapstruct.version>
     <minio.version>8.3.0</minio.version>
     <modelmapper.version>2.4.4</modelmapper.version>
+    <okhttp3.version>4.9.1</okhttp3.version>
     <springdoc.version>1.5.10</springdoc.version>
     <swagger-annotations.version>1.6.2</swagger-annotations.version>
     <swagger-annotations-v3.version>2.1.10</swagger-annotations-v3.version>
@@ -174,7 +175,19 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-bom</artifactId>
+        <version>${okhttp3.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.immutables</groupId>
         <artifactId>value</artifactId>
@@ -236,10 +249,51 @@
         <artifactId>dataurl</artifactId>
         <version>${dataurl.version}</version>
       </dependency>
+
       <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>${commons-io.version}</version>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>logging-interceptor</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>mockwebserver</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okcurl</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-dnsoverhttps</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-sse</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-testing-support</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-tls</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-urlconnection</artifactId>
+        <version>${okhttp3.version}</version>
       </dependency>
 
       <dependency>
