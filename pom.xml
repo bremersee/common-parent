@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>2.2.5</version>
+  <version>2.3.0</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -38,20 +38,26 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2020</inceptionYear>
 
-    <spring-boot.version>2.4.7</spring-boot.version>
-    <spring-boot-admin.version>2.3.1</spring-boot-admin.version>
+    <spring-boot.version>2.5.4</spring-boot.version>
+    <spring-boot-admin.version>2.4.3</spring-boot-admin.version>
     <spring-cloud.version>2020.0.3</spring-cloud.version>
-    <testcontainers.version>1.15.3</testcontainers.version>
+    <testcontainers.version>1.16.0</testcontainers.version>
 
-    <commons-io.version>2.8.0</commons-io.version>
+    <awaitility.version>4.1.0</awaitility.version>
+    <commons-io.version>2.11.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
-    <embedded-redis.version>0.7.3</embedded-redis.version>
-    <ldaptive.version>2.0.1</ldaptive.version>
-    <minio.version>8.2.2</minio.version>
+    <embedded-redis.version>0.11.0</embedded-redis.version>
+    <!-- <embedded-redis.version>0.7.3</embedded-redis.version> -->
+    <immutables.version>2.8.2</immutables.version>
+    <javers.version>6.2.5</javers.version>
+    <ldaptive.version>2.1.0</ldaptive.version>
+    <mapstruct.version>1.4.2.Final</mapstruct.version>
+    <minio.version>8.3.0</minio.version>
     <modelmapper.version>2.4.4</modelmapper.version>
-    <springdoc.version>1.5.9</springdoc.version>
+    <okhttp3.version>4.9.1</okhttp3.version>
+    <springdoc.version>1.5.10</springdoc.version>
     <swagger-annotations.version>1.6.2</swagger-annotations.version>
-    <swagger-annotations-v3.version>2.1.9</swagger-annotations-v3.version>
+    <swagger-annotations-v3.version>2.1.10</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
@@ -171,6 +177,39 @@
         <scope>import</scope>
       </dependency>
       <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-bom</artifactId>
+        <version>${okhttp3.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.awaitility</groupId>
+        <artifactId>awaitility</artifactId>
+        <version>${awaitility.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>value</artifactId>
+        <version>${immutables.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javers</groupId>
+        <artifactId>javers-spring-boot-starter-mongo</artifactId>
+        <version>${javers.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javers</groupId>
+        <artifactId>javers-spring-boot-starter-sql</artifactId>
+        <version>${javers.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.ldaptive</groupId>
         <artifactId>ldaptive</artifactId>
         <version>${ldaptive.version}</version>
@@ -197,6 +236,11 @@
         <version>${ldaptive.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
         <groupId>io.minio</groupId>
         <artifactId>minio</artifactId>
         <version>${minio.version}</version>
@@ -211,10 +255,51 @@
         <artifactId>dataurl</artifactId>
         <version>${dataurl.version}</version>
       </dependency>
+
       <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>${commons-io.version}</version>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>logging-interceptor</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>mockwebserver</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okcurl</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-dnsoverhttps</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-sse</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-testing-support</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-tls</artifactId>
+        <version>${okhttp3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-urlconnection</artifactId>
+        <version>${okhttp3.version}</version>
       </dependency>
 
       <dependency>
@@ -260,6 +345,12 @@
       </dependency>
 
       <dependency>
+        <groupId>com.github.codemonstur</groupId>
+        <artifactId>embedded-redis</artifactId>
+        <version>${embedded-redis.version}</version>
+      </dependency>
+      <!--
+      <dependency>
         <groupId>it.ozimov</groupId>
         <artifactId>embedded-redis</artifactId>
         <version>${embedded-redis.version}</version>
@@ -270,6 +361,7 @@
           </exclusion>
         </exclusions>
       </dependency>
+      -->
     </dependencies>
   </dependencyManagement>
 
