@@ -38,9 +38,9 @@
     <product.vendor>bremersee.org</product.vendor>
     <inceptionYear>2020</inceptionYear>
 
-    <spring-boot.version>2.5.4</spring-boot.version>
+    <spring-boot.version>2.5.5</spring-boot.version>
     <spring-boot-admin.version>2.4.3</spring-boot-admin.version>
-    <spring-cloud.version>2020.0.3</spring-cloud.version>
+    <spring-cloud.version>2020.0.4</spring-cloud.version>
     <testcontainers.version>1.16.0</testcontainers.version>
 
     <awaitility.version>4.1.0</awaitility.version>
