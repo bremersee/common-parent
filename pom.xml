@@ -53,6 +53,7 @@
     <ldaptive.version>2.1.0</ldaptive.version>
     <mapstruct.version>1.4.2.Final</mapstruct.version>
     <minio.version>8.3.0</minio.version>
+    <mock-server.version>5.11.2</mock-server.version>
     <modelmapper.version>2.4.4</modelmapper.version>
     <okhttp3.version>4.9.1</okhttp3.version>
     <springdoc.version>1.5.10</springdoc.version>
@@ -244,6 +245,11 @@
         <groupId>io.minio</groupId>
         <artifactId>minio</artifactId>
         <version>${minio.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mock-server</groupId>
+        <artifactId>mockserver-netty</artifactId>
+        <version>${mock-server.version}</version>
       </dependency>
       <dependency>
         <groupId>org.modelmapper</groupId>
