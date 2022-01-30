@@ -38,8 +38,8 @@
 
     <product.vendor>bremersee.org</product.vendor>
 
-    <spring-boot.version>2.6.2</spring-boot.version>
-    <spring-boot-admin.version>2.6.0</spring-boot-admin.version>
+    <spring-boot.version>2.6.3</spring-boot.version>
+    <spring-boot-admin.version>2.6.2</spring-boot-admin.version>
     <spring-cloud.version>2021.0.0</spring-cloud.version>
     <testcontainers.version>1.16.2</testcontainers.version>
 
