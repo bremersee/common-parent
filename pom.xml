@@ -100,6 +100,10 @@
     <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
     <maven-pmd-plugin.version>3.15.0</maven-pmd-plugin.version>
+    <pmd.version>6.42.0</pmd.version>
+    <!--
+    see https://maven.apache.org/plugins/maven-pmd-plugin/examples/upgrading-PMD-at-runtime.html
+    -->
 
     <check-style-location>google_checks.xml</check-style-location>
     <checkstyle.version>9.2.1</checkstyle.version>
@@ -574,6 +578,33 @@
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
               <version>${checkstyle.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>${maven-pmd-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-core</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-java</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-javascript</artifactId>
+              <version>${pmd.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>net.sourceforge.pmd</groupId>
+              <artifactId>pmd-jsp</artifactId>
+              <version>${pmd.version}</version>
             </dependency>
           </dependencies>
         </plugin>
