@@ -40,13 +40,13 @@ pipeline {
 #        sh 'mvn -B site-deploy'
 #      }
 #    }
-    stage('Release Site') {
-      when {
-        branch 'master'
-      }
-      steps {
-        sh 'mvn -B -P gh-pages-site site site:stage scm-publish:publish-scm'
-      }
-    }
+#    stage('Release Site') {
+#      when {
+#        branch 'master'
+#      }
+#      steps {
+#        sh 'mvn -B -P gh-pages-site site site:stage scm-publish:publish-scm'
+#      }
+#    }
   }
 }
