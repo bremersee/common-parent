@@ -12,7 +12,6 @@ pipeline {
   stages {
     stage('Tools') {
       steps {
-        sh 'echo "Using java and maven"'
         sh 'java -version'
         sh 'mvn -B --version'
       }
