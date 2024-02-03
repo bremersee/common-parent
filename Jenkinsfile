@@ -3,7 +3,7 @@ pipeline {
     label 'maven'
   }
   tools {
-    jdk 'jdk11'
+    jdk 'jdk17'
     maven 'm3'
   }
   options {
@@ -21,25 +21,25 @@ pipeline {
         sh 'mvn -B clean install'
       }
     }
-    stage('Deploy') {
-      when {
-        anyOf {
-          branch 'develop'
-          branch 'master'
-        }
-      }
-      steps {
-        sh 'mvn -B -P deploy clean deploy'
-      }
-    }
-    stage('Snapshot Site') {
-      when {
-        branch 'develop'
-      }
-      steps {
-        sh 'mvn -B site-deploy'
-      }
-    }
+#    stage('Deploy') {
+#      when {
+#        anyOf {
+#          branch 'develop'
+#          branch 'master'
+#        }
+#      }
+#      steps {
+#        sh 'mvn -B -P deploy clean deploy'
+#      }
+#    }
+#    stage('Snapshot Site') {
+#      when {
+#        branch 'develop'
+#      }
+#      steps {
+#        sh 'mvn -B site-deploy'
+#      }
+#    }
     stage('Release Site') {
       when {
         branch 'master'
