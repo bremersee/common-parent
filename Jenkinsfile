@@ -12,7 +12,6 @@ pipeline {
   stages {
     stage('Tools') {
       steps {
-        sh 'echo "Using java and maven"'
         sh 'java -version'
         sh 'mvn -B --version'
       }
@@ -22,6 +21,7 @@ pipeline {
         sh 'mvn -B clean install'
       }
     }
+/*
 #    stage('Deploy') {
 #      when {
 #        anyOf {
@@ -49,5 +49,6 @@ pipeline {
 #        sh 'mvn -B -P gh-pages-site site site:stage scm-publish:publish-scm'
 #      }
 #    }
+*/
   }
 }
