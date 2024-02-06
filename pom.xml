@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>2.4.1-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -34,20 +34,18 @@
     <github.global.server>github</github.global.server>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>11</java.version>
+    <java.version>17</java.version>
 
     <product.vendor>bremersee.org</product.vendor>
 
-    <spring-boot.version>2.6.3</spring-boot.version>
-    <spring-boot-admin.version>2.6.2</spring-boot-admin.version>
-    <spring-cloud.version>2021.0.0</spring-cloud.version>
-    <testcontainers.version>1.16.2</testcontainers.version>
+    <spring-boot.version>3.2.2</spring-boot.version>
+    <spring-boot-admin.version>3.2.1</spring-boot-admin.version>
+    <spring-cloud.version>2023.0.0</spring-cloud.version>
+    <testcontainers.version>1.19.3</testcontainers.version>
 
-    <awaitility.version>4.1.1</awaitility.version>
     <commons-io.version>2.11.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.11.0</embedded-redis.version>
-    <!-- <embedded-redis.version>0.7.3</embedded-redis.version> -->
     <immutables.version>2.8.8</immutables.version>
     <javers.version>6.5.3</javers.version>
     <ldaptive.version>2.1.0</ldaptive.version>
@@ -55,60 +53,56 @@
     <mapstruct.version>1.4.2.Final</mapstruct.version>
     <minio.version>8.3.5</minio.version>
     <mock-server.version>5.11.2</mock-server.version>
-    <!-- <modelmapper.version>3.0.0</modelmapper.version> -->
-    <modelmapper.version>2.4.5</modelmapper.version>
-    <okhttp3.version>4.9.3</okhttp3.version>
     <reflections.version>0.10.2</reflections.version>
     <springdoc.version>1.6.4</springdoc.version>
     <swagger-annotations.version>1.6.4</swagger-annotations.version>
     <swagger-annotations-v3.version>2.1.12</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-    <maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
-    <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
+    <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
+    <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-    <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
-    <maven-dependency-plugin.version>3.2.0</maven-dependency-plugin.version>
-    <maven-deploy-plugin.version>3.0.0-M2</maven-deploy-plugin.version>
-    <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
-    <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
-    <!-- <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version> -->
-    <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
-    <maven-help-plugin.version>3.2.0</maven-help-plugin.version>
-    <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
-    <maven-invoker-plugin.version>3.2.2</maven-invoker-plugin.version>
-    <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
-    <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
-    <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
-    <maven-scm-publish-plugin.version>3.1.0</maven-scm-publish-plugin.version>
-    <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
-    <maven-site-plugin.version>3.10.0</maven-site-plugin.version>
-    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-    <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
+    <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+    <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
+    <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
+    <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
+    <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
+    <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
+    <maven-invoker-plugin.version>3.6.0</maven-invoker-plugin.version>
+    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+    <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    <maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
+    <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
+    <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
+    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+    <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
-    <wagon.version>3.5.1</wagon.version>
-    <jacoco-maven-plugin>0.8.7</jacoco-maven-plugin>
-    <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-    <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
-    <buildnumber-maven-plugin.version>1.4</buildnumber-maven-plugin.version>
+    <wagon.version>3.5.3</wagon.version>
+    <jacoco-maven-plugin>0.8.11</jacoco-maven-plugin>
+    <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
+    <buildnumber-maven-plugin.version>3.1.0</buildnumber-maven-plugin.version>
     <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
 
     <!-- reporting -->
-    <maven-project-info-reports-plugin.version>3.1.2</maven-project-info-reports-plugin.version>
-    <maven-surefire-report-plugin.version>3.0.0-M5</maven-surefire-report-plugin.version>
+    <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
+    <maven-surefire-report-plugin.version>3.1.2</maven-surefire-report-plugin.version>
     <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <maven-pmd-plugin.version>3.14.0</maven-pmd-plugin.version>
-    <pmd.version>6.29.0</pmd.version>
+    <maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version><!-- last 3.14.0, current 3.21.2 -->
+    <pmd.version>6.55.0</pmd.version><!-- last 6.29.0, current 6.55.0 -->
     <!--
     since 3.15 I got Processing Errors (ArrayIndexOutOfBoundsException)
     see https://maven.apache.org/plugins/maven-pmd-plugin/examples/upgrading-PMD-at-runtime.html
     -->
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>9.2.1</checkstyle.version>
+    <checkstyle.version>10.13.0</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -187,18 +181,13 @@
         <scope>import</scope>
       </dependency>
       <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-bom</artifactId>
-        <version>${okhttp3.version}</version>
+        <groupId>de.codecentric</groupId>
+        <artifactId>spring-boot-admin-dependencies</artifactId>
+        <version>${spring-boot-admin.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
 
-      <dependency>
-        <groupId>org.awaitility</groupId>
-        <artifactId>awaitility</artifactId>
-        <version>${awaitility.version}</version>
-      </dependency>
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
@@ -786,6 +775,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco-maven-plugin}</version>
         <configuration>
           <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
         </configuration>
@@ -800,6 +790,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${maven-checkstyle-plugin.version}</version>
         <configuration>
           <configLocation>${check-style-location}</configLocation>
           <encoding>UTF-8</encoding>
@@ -851,6 +842,7 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>${nexus-staging-maven-plugin.version}</version>
           </plugin>
         </plugins>
       </build>

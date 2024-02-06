@@ -7,7 +7,7 @@
   <parent>
     <artifactId>common-parent</artifactId>
     <groupId>org.bremersee</groupId>
-    <version>2.4.1-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>common-service-parent</artifactId>
@@ -18,13 +18,13 @@
 
   <properties>
     <!-- Higher versions of dockerfile maven plugin cause errors (tested to version 1.4.10) -->
-    <dockerfile-maven-plugin.version>1.4.6</dockerfile-maven-plugin.version>
+    <dockerfile-maven-plugin.version>1.4.6</dockerfile-maven-plugin.version> <!-- TODO test 1.4.13 -->
     <dockerfile.skip>true</dockerfile.skip>
     <dockerfile.tag>${project.version}</dockerfile.tag>
     <dockerfile.image>${project.artifactId}</dockerfile.image>
     <dockerfile.repository>docker.io/bremersee/${dockerfile.image}</dockerfile.repository>
 
-    <springdoc-openapi-maven-plugin.version>1.3</springdoc-openapi-maven-plugin.version>
+    <springdoc-openapi-maven-plugin.version>1.4</springdoc-openapi-maven-plugin.version>
   </properties>
 
   <developers>
