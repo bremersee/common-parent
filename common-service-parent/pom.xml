@@ -18,7 +18,7 @@
 
   <properties>
     <!-- Higher versions of dockerfile maven plugin cause errors (tested to version 1.4.10) -->
-    <dockerfile-maven-plugin.version>1.4.6</dockerfile-maven-plugin.version> <!-- TODO test 1.4.13 -->
+    <dockerfile-maven-plugin.version>1.4.13</dockerfile-maven-plugin.version> <!-- TODO test 1.4.13 -->
     <dockerfile.skip>true</dockerfile.skip>
     <dockerfile.tag>${project.version}</dockerfile.tag>
     <dockerfile.image>${project.artifactId}</dockerfile.image>
