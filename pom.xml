@@ -46,7 +46,7 @@
     <commons-io.version>2.11.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.11.0</embedded-redis.version>
-    <immutables.version>2.9.2</immutables.version>
+    <immutables.version>2.10.0</immutables.version>
     <javers.version>6.5.3</javers.version>
     <ldaptive.version>2.1.0</ldaptive.version>
     <!-- <jsr305.version>3.0.2</jsr305.version> -->
@@ -187,16 +187,18 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>bom</artifactId>
+        <version>${immutables.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${commons-io.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.immutables</groupId>
-        <artifactId>value</artifactId>
-        <version>${immutables.version}</version>
       </dependency>
       <dependency>
         <groupId>org.javers</groupId>
