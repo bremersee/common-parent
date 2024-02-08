@@ -46,10 +46,10 @@
     <commons-io.version>2.11.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>0.11.0</embedded-redis.version>
-    <immutables.version>2.8.8</immutables.version>
+    <immutables.version>2.9.2</immutables.version>
     <javers.version>6.5.3</javers.version>
     <ldaptive.version>2.1.0</ldaptive.version>
-    <jsr305.version>3.0.2</jsr305.version>
+    <!-- <jsr305.version>3.0.2</jsr305.version> -->
     <mapstruct.version>1.4.2.Final</mapstruct.version>
     <minio.version>8.3.5</minio.version>
     <mock-server.version>5.11.2</mock-server.version>
@@ -208,11 +208,13 @@
         <artifactId>javers-spring-boot-starter-sql</artifactId>
         <version>${javers.version}</version>
       </dependency>
+      <!--
       <dependency>
         <groupId>com.google.code.findbugs</groupId>
         <artifactId>jsr305</artifactId>
         <version>${jsr305.version}</version>
       </dependency>
+      -->
       <dependency>
         <groupId>org.ldaptive</groupId>
         <artifactId>ldaptive</artifactId>
