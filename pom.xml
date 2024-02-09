@@ -43,20 +43,18 @@
     <spring-cloud.version>2023.0.0</spring-cloud.version>
     <testcontainers.version>1.19.3</testcontainers.version>
 
-    <commons-io.version>2.11.0</commons-io.version>
+    <commons-io.version>2.15.1</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
-    <embedded-redis.version>0.11.0</embedded-redis.version>
+    <embedded-redis.version>1.4.0</embedded-redis.version>
     <immutables.version>2.10.0</immutables.version>
-    <javers.version>6.5.3</javers.version>
-    <ldaptive.version>2.1.0</ldaptive.version>
-    <!-- <jsr305.version>3.0.2</jsr305.version> -->
-    <mapstruct.version>1.4.2.Final</mapstruct.version>
-    <minio.version>8.3.5</minio.version>
-    <mock-server.version>5.11.2</mock-server.version>
+    <javers.version>7.3.7</javers.version>
+    <ldaptive.version>2.3.0</ldaptive.version>
+    <mapstruct.version>1.5.5.Final</mapstruct.version>
+    <minio.version>8.5.7</minio.version>
+    <mock-server.version>5.15.0</mock-server.version>
     <reflections.version>0.10.2</reflections.version>
-    <springdoc.version>1.6.4</springdoc.version>
-    <swagger-annotations.version>1.6.4</swagger-annotations.version>
-    <swagger-annotations-v3.version>2.1.12</swagger-annotations-v3.version>
+    <springdoc.version>1.7.0</springdoc.version> <!-- latest Open Source release supporting Spring Boot 2.x and 1.x. -->
+    <swagger-annotations-v3.version>2.2.20</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
@@ -772,7 +770,6 @@
         <version>${maven-pmd-plugin.version}</version>
         <configuration>
           <format>xml</format>
-          <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
           <minimumTokens>100</minimumTokens>
         </configuration>
       </plugin>
