@@ -92,12 +92,8 @@
     <maven-surefire-report-plugin.version>3.1.2</maven-surefire-report-plugin.version>
     <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version><!-- last 3.14.0, current 3.21.2 -->
-    <pmd.version>6.55.0</pmd.version><!-- last 6.29.0, current 6.55.0 -->
-    <!--
-    since 3.15 I got Processing Errors (ArrayIndexOutOfBoundsException)
-    see https://maven.apache.org/plugins/maven-pmd-plugin/examples/upgrading-PMD-at-runtime.html
-    -->
+    <maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version>
+    <pmd.version>6.55.0</pmd.version>
 
     <check-style-location>google_checks.xml</check-style-location>
     <checkstyle.version>10.13.0</checkstyle.version>
@@ -208,13 +204,6 @@
         <artifactId>javers-spring-boot-starter-sql</artifactId>
         <version>${javers.version}</version>
       </dependency>
-      <!--
-      <dependency>
-        <groupId>com.google.code.findbugs</groupId>
-        <artifactId>jsr305</artifactId>
-        <version>${jsr305.version}</version>
-      </dependency>
-      -->
       <dependency>
         <groupId>org.ldaptive</groupId>
         <artifactId>ldaptive</artifactId>
@@ -273,52 +262,6 @@
       </dependency>
 
       <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>logging-interceptor</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>mockwebserver</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okcurl</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-dnsoverhttps</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-sse</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-testing-support</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-tls</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp-urlconnection</artifactId>
-        <version>${okhttp3.version}</version>
-      </dependency>
-
-      <dependency>
         <groupId>org.springdoc</groupId>
         <artifactId>springdoc-openapi-common</artifactId>
         <version>${springdoc.version}</version>
@@ -365,19 +308,6 @@
         <artifactId>embedded-redis</artifactId>
         <version>${embedded-redis.version}</version>
       </dependency>
-      <!--
-      <dependency>
-        <groupId>it.ozimov</groupId>
-        <artifactId>embedded-redis</artifactId>
-        <version>${embedded-redis.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      -->
     </dependencies>
   </dependencyManagement>
 
