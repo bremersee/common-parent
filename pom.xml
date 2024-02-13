@@ -49,11 +49,14 @@
     <immutables.version>2.10.0</immutables.version>
     <javers.version>7.3.7</javers.version>
     <ldaptive.version>2.3.0</ldaptive.version>
+    <lombok.version>1.18.30</lombok.version>
+    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <minio.version>8.5.7</minio.version>
     <mock-server.version>5.15.0</mock-server.version>
     <reflections.version>0.10.2</reflections.version>
-    <springdoc.version>1.7.0</springdoc.version> <!-- latest Open Source release supporting Spring Boot 2.x and 1.x. -->
+    <springdoc.version>1.7.0
+    </springdoc.version> <!-- latest Open Source release supporting Spring Boot 2.x and 1.x. -->
     <swagger-annotations-v3.version>2.2.20</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
@@ -315,6 +318,12 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.immutables</groupId>
+      <artifactId>value</artifactId>
       <optional>true</optional>
     </dependency>
   </dependencies>
@@ -386,6 +395,28 @@
             <source>${java.version}</source>
             <target>${java.version}</target>
             <encoding>${project.build.sourceEncoding}</encoding>
+            <annotationProcessorPaths>
+              <path>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+              </path>
+              <path>
+                <groupId>org.immutables</groupId>
+                <artifactId>value</artifactId>
+                <version>${immutables.version}</version>
+              </path>
+              <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+              </path>
+              <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-mapstruct-binding</artifactId>
+                <version>${lombok-mapstruct-binding.version}</version>
+              </path>
+            </annotationProcessorPaths>
           </configuration>
         </plugin>
         <plugin>
