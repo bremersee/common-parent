@@ -24,6 +24,12 @@
     <dockerfile.image>${project.artifactId}</dockerfile.image>
     <dockerfile.repository>docker.io/bremersee/${dockerfile.image}</dockerfile.repository>
 
+    <openapi.skip>true</openapi.skip>
+    <openapi.attachArtifact>false</openapi.attachArtifact>
+    <openapi.apiDocsUrl>http://localhost:8080/v3/api-docs</openapi.apiDocsUrl>
+    <openapi.outputDir>${project.build.directory}</openapi.outputDir><!-- not starting with / -->
+    <openapi.outputFileName>openapi.json</openapi.outputFileName>
+
     <springdoc-openapi-maven-plugin.version>1.4</springdoc-openapi-maven-plugin.version>
   </properties>
 
@@ -77,6 +83,9 @@
             </execution>
           </executions>
         </plugin>
+        <!--
+          see: https://github.com/springdoc/springdoc-openapi-maven-plugin
+        -->
         <plugin>
           <groupId>org.springdoc</groupId>
           <artifactId>springdoc-openapi-maven-plugin</artifactId>
@@ -126,6 +135,70 @@
       <properties>
         <dockerfile.skip>false</dockerfile.skip>
       </properties>
+    </profile>
+
+    <!-- start with 'mvn -P openapi verify' -->
+    <!--
+      generate, deploy to documentation repo, build clients etc.
+    -->
+    <profile>
+      <id>openapi</id>
+      <properties>
+        <openapi.skip>false</openapi.skip>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>${spring-boot.version}</version>
+            <configuration>
+              <jvmArguments>-Dspring.application.admin.enabled=true</jvmArguments>
+            </configuration>
+            <executions>
+              <execution>
+                <id>pre-integration-test</id>
+                <goals>
+                  <goal>start</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>post-integration-test</id>
+                <goals>
+                  <goal>stop</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-maven-plugin</artifactId>
+            <version>${springdoc-openapi-maven-plugin.version}</version>
+            <executions>
+              <execution>
+                <id>integration-test</id>
+                <goals>
+                  <goal>generate</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <kip>${openapi.skip}</kip>
+              <attachArtifact>${openapi.attachArtifact}</attachArtifact>
+              <apiDocsUrl>${openapi.apiDocsUrl}</apiDocsUrl>
+              <outputFileName>${openapi.outputFileName}</outputFileName>
+              <outputDir>${openapi.outputDir}</outputDir>
+              <skip>false</skip>
+              <!--
+              <headers>
+                <header1key>header1value</header1key>
+                <header2key>header2value</header2key>
+              </headers>
+              -->
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 </project>
