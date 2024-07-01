@@ -33,7 +33,7 @@ pipeline {
           environment name: 'DEPLOY', value: 'true'
           anyOf {
             branch 'develop'
-            branch 'master'
+            branch 'main'
           }
         }
       }
@@ -58,7 +58,7 @@ pipeline {
     stage('Release Site') {
       when {
         allOf {
-          branch 'master'
+          branch 'main'
           environment name: 'RELEASE_SITE', value: 'true'
         }
       }
