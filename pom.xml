@@ -38,9 +38,9 @@
 
     <product.vendor>bremersee.org</product.vendor>
 
-    <spring-boot.version>3.2.6</spring-boot.version>
+    <spring-boot.version>3.2.7</spring-boot.version>
     <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
-    <spring-cloud.version>2023.0.1</spring-cloud.version>
+    <spring-cloud.version>2023.0.2</spring-cloud.version>
     <testcontainers.version>1.19.3</testcontainers.version>
 
     <commons-io.version>2.15.1</commons-io.version>
@@ -755,6 +755,16 @@
   </reporting>
 
   <profiles>
+    <profile>
+      <id>build-system</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <properties>
+        <argLine>-Dorg.bremersee.test.executor=BUILD_SYSTEM</argLine>
+      </properties>
+    </profile>
+
     <profile>
       <id>deploy</id>
       <build>
