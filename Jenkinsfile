@@ -2,8 +2,14 @@ pipeline {
   agent {
     label 'maven'
   }
+  environment {
+    DEPLOY = true
+    SNAPSHOT_SITE = true
+    RELEASE_SITE = true
+    DEPLOY_FEATURE = true
+  }
   tools {
-    jdk 'jdk11'
+    jdk 'jdk17'
     maven 'm3'
   }
   options {
@@ -23,9 +29,12 @@ pipeline {
     }
     stage('Deploy') {
       when {
-        anyOf {
-          branch 'develop'
-          branch 'master'
+        allOf {
+          environment name: 'DEPLOY', value: 'true'
+          anyOf {
+            branch 'develop'
+            branch 'master'
+          }
         }
       }
       steps {
@@ -34,7 +43,13 @@ pipeline {
     }
     stage('Snapshot Site') {
       when {
-        branch 'develop'
+        allOf {
+          environment name: 'SNAPSHOT_SITE', value: 'true'
+          anyOf {
+            branch 'develop'
+            branch 'feature/*'
+          }
+        }
       }
       steps {
         sh 'mvn -B site-deploy'
@@ -42,10 +57,24 @@ pipeline {
     }
     stage('Release Site') {
       when {
-        branch 'master'
+        allOf {
+          branch 'master'
+          environment name: 'RELEASE_SITE', value: 'true'
+        }
       }
       steps {
         sh 'mvn -B -P gh-pages-site site site:stage scm-publish:publish-scm'
+      }
+    }
+    stage('Deploy Feature') {
+      when {
+        allOf {
+          branch 'feature/*'
+          environment name: 'DEPLOY_FEATURE', value: 'true'
+        }
+      }
+      steps {
+        sh 'mvn -B -P feature,allow-features clean deploy'
       }
     }
   }
