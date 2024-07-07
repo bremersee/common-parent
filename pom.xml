@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -46,6 +46,7 @@
     <commons-io.version>2.15.1</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>1.4.0</embedded-redis.version>
+    <hibernate-orm.version>6.4.9.Final</hibernate-orm.version>
     <immutables.version>2.10.0</immutables.version>
     <javers.version>7.3.7</javers.version>
     <ldaptive.version>2.3.0</ldaptive.version>
@@ -386,6 +387,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-mapstruct-binding</artifactId>
                 <version>${lombok-mapstruct-binding.version}</version>
+              </path>
+              <path>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jpamodelgen</artifactId>
+                <version>${hibernate-orm.version}</version>
               </path>
               <path>
                 <groupId>org.springframework.boot</groupId>
