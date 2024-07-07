@@ -50,6 +50,11 @@
     <javers.version>7.5.0</javers.version>
     <ldaptive.version>2.3.2</ldaptive.version>
     <lombok.version>1.18.34</lombok.version>
+    <hibernate-orm.version>6.4.9.Final</hibernate-orm.version>
+    <immutables.version>2.10.1</immutables.version>
+    <javers.version>7.3.7</javers.version>
+    <ldaptive.version>2.3.0</ldaptive.version>
+    <lombok.version>1.18.30</lombok.version>
     <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <minio.version>8.5.11</minio.version>
@@ -386,6 +391,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-mapstruct-binding</artifactId>
                 <version>${lombok-mapstruct-binding.version}</version>
+              </path>
+              <path>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-jpamodelgen</artifactId>
+                <version>${hibernate-orm.version}</version>
               </path>
               <path>
                 <groupId>org.springframework.boot</groupId>
