@@ -59,6 +59,7 @@
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <minio.version>8.5.11</minio.version>
     <mock-server.version>5.15.0</mock-server.version>
+    <passay.version>1.6.4</passay.version>
     <reflections.version>0.10.2</reflections.version>
     <springdoc.version>2.6.0</springdoc.version>
     <swagger-annotations-v3.version>2.2.22</swagger-annotations-v3.version>
@@ -269,6 +270,11 @@
         <groupId>eu.maxschuster</groupId>
         <artifactId>dataurl</artifactId>
         <version>${dataurl.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.passay</groupId>
+        <artifactId>passay</artifactId>
+        <version>${passay.version}</version>
       </dependency>
       <dependency>
         <groupId>org.reflections</groupId>

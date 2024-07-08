@@ -3,8 +3,8 @@ pipeline {
     label 'maven'
   }
   environment {
-    DEPLOY = false
-    SNAPSHOT_SITE = false
+    DEPLOY = true
+    SNAPSHOT_SITE = true
     RELEASE_SITE = true
     DEPLOY_FEATURE = true
   }
