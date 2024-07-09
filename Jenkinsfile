@@ -34,6 +34,7 @@ pipeline {
           anyOf {
             branch 'develop'
             branch 'main'
+            branch 'bugfix/*'
           }
         }
       }
@@ -48,6 +49,7 @@ pipeline {
           anyOf {
             branch 'develop'
             branch 'feature/*'
+            branch 'bugfix/*'
           }
         }
       }
