@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>3.0.1</version>
+  <version>3.1.0</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -38,69 +38,70 @@
 
     <product.vendor>bremersee.org</product.vendor>
 
-    <spring-boot.version>3.2.7</spring-boot.version>
-    <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
+    <spring-boot.version>3.3.1</spring-boot.version>
+    <spring-boot-admin.version>3.3.2</spring-boot-admin.version>
     <spring-cloud.version>2023.0.2</spring-cloud.version>
-    <testcontainers.version>1.19.3</testcontainers.version>
+    <testcontainers.version>1.19.8</testcontainers.version>
 
-    <commons-io.version>2.15.1</commons-io.version>
+    <commons-io.version>2.16.1</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
-    <embedded-redis.version>1.4.0</embedded-redis.version>
-    <hibernate-orm.version>6.4.9.Final</hibernate-orm.version>
-    <immutables.version>2.10.0</immutables.version>
-    <javers.version>7.3.7</javers.version>
-    <ldaptive.version>2.3.0</ldaptive.version>
-    <lombok.version>1.18.30</lombok.version>
+    <embedded-redis.version>1.4.3</embedded-redis.version>
+    <hibernate-orm.version>6.5.2.Final</hibernate-orm.version>
+    <immutables.version>2.10.1</immutables.version>
+    <javers.version>7.5.0</javers.version>
+    <ldaptive.version>2.3.2</ldaptive.version>
+    <lombok.version>1.18.34</lombok.version>
     <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
-    <minio.version>8.5.9</minio.version>
+    <minio.version>8.5.11</minio.version>
     <mock-server.version>5.15.0</mock-server.version>
+    <passay.version>1.6.4</passay.version>
     <reflections.version>0.10.2</reflections.version>
-    <springdoc.version>2.3.0</springdoc.version>
-    <swagger-annotations-v3.version>2.2.20</swagger-annotations-v3.version>
+    <springdoc.version>2.6.0</springdoc.version>
+    <swagger-annotations-v3.version>2.2.22</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
-    <build-helper-maven-plugin.version>3.4.0</build-helper-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.1.0</buildnumber-maven-plugin.version>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
-    <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
-    <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
-    <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-    <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
-    <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
-    <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
-    <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
-    <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
-    <maven-help-plugin.version>3.4.0</maven-help-plugin.version>
-    <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
-    <maven-invoker-plugin.version>3.6.0</maven-invoker-plugin.version>
-    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-    <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+    <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
+    <maven-checkstyle-plugin.version>3.4.0</maven-checkstyle-plugin.version>
+    <maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
+    <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+    <maven-dependency-plugin.version>3.7.1</maven-dependency-plugin.version>
+    <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
+    <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
+    <maven-failsafe-plugin.version>3.3.0</maven-failsafe-plugin.version>
+    <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
+    <maven-help-plugin.version>3.4.1</maven-help-plugin.version>
+    <maven-install-plugin.version>3.1.2</maven-install-plugin.version>
+    <maven-invoker-plugin.version>3.7.0</maven-invoker-plugin.version>
+    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+    <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-    <maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
-    <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
+    <maven-scm-publish-plugin.version>3.3.0</maven-scm-publish-plugin.version>
+    <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
-    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+    <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+    <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
-    <jacoco-maven-plugin>0.8.11</jacoco-maven-plugin>
+    <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
     <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
     <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
     <wagon.version>3.5.3</wagon.version>
 
     <!-- reporting -->
     <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <maven-jxr-plugin.version>3.1.1</maven-jxr-plugin.version>
-    <maven-pmd-plugin.version>3.21.2</maven-pmd-plugin.version>
-    <pmd.version>6.55.0</pmd.version>
-    <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
-    <maven-surefire-report-plugin.version>3.1.2</maven-surefire-report-plugin.version>
+    <maven-jxr-plugin.version>3.4.0</maven-jxr-plugin.version>
+    <maven-pmd-plugin.version>3.23.0</maven-pmd-plugin.version>
+    <pmd.version>7.3.0</pmd.version>
+    <maven-project-info-reports-plugin.version>3.6.1</maven-project-info-reports-plugin.version>
+    <maven-surefire-report-plugin.version>3.3.0</maven-surefire-report-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>10.13.0</checkstyle.version>
+    <checkstyle.version>10.17.0</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -267,6 +268,11 @@
         <version>${dataurl.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.passay</groupId>
+        <artifactId>passay</artifactId>
+        <version>${passay.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.reflections</groupId>
         <artifactId>reflections</artifactId>
         <version>${reflections.version}</version>
@@ -423,6 +429,22 @@
             </archive>
           </configuration>
         </plugin>
+        <!-- Always downloads dependencies -> offline mode is not possible
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${maven-dependency-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>purge-local-dependencies</id>
+              <phase>process-sources</phase>
+              <goals>
+                <goal>purge-local-repository</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>buildnumber-maven-plugin</artifactId>
@@ -554,7 +576,7 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>${jacoco-maven-plugin}</version>
+          <version>${jacoco-maven-plugin.version}</version>
           <configuration>
             <destFile>${project.build.directory}/coverage-reports/jacoco.exec</destFile>
             <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
@@ -638,6 +660,12 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
+      <!--
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+      -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
@@ -654,6 +682,10 @@
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
+      <!-- Goal 'remove-project-artifact' is deprecated:
+           There is a similar goal: dependency:purge-local-repository
+           https://maven.apache.org/plugins/maven-dependency-plugin/purge-local-repository-mojo.html
+           By the way such goal should by not used with Maven 3/4 anymore.
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -669,6 +701,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
     </plugins>
   </build>
 
@@ -719,7 +752,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin}</version>
+        <version>${jacoco-maven-plugin.version}</version>
         <configuration>
           <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
         </configuration>
