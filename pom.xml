@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>3.1.0</version>
+  <version>3.1.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -80,7 +80,8 @@
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
     <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
-    <maven-scm-publish-plugin.version>3.3.0</maven-scm-publish-plugin.version>
+    <!-- git clone doesn't work with version 3.3.0, pub-key error -->
+    <maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
     <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
     <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
