@@ -102,7 +102,7 @@
     <maven-surefire-report-plugin.version>3.3.0</maven-surefire-report-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>10.17.0</checkstyle.version>
+    <checkstyle.version>10.20.1</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
