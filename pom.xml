@@ -55,6 +55,7 @@
     <mapstruct.version>1.6.3</mapstruct.version>
     <minio.version>8.5.14</minio.version>
     <mock-server.version>5.15.0</mock-server.version>
+    <okhttp3.version>4.12.0</okhttp3.version>
     <passay.version>1.6.6</passay.version>
     <reflections.version>0.10.2</reflections.version>
     <springdoc.version>2.7.0</springdoc.version>
@@ -198,6 +199,13 @@
         <groupId>org.immutables</groupId>
         <artifactId>bom</artifactId>
         <version>${immutables.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-bom</artifactId>
+        <version>${okhttp3.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
