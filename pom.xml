@@ -588,7 +588,6 @@
           <version>${jacoco-maven-plugin.version}</version>
           <configuration>
             <destFile>${project.build.directory}/coverage-reports/jacoco.exec</destFile>
-            <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
           </configuration>
           <executions>
             <execution>
