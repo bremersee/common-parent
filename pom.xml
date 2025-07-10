@@ -65,6 +65,7 @@
 
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.2.1</buildnumber-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
@@ -90,7 +91,7 @@
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
     <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <!-- <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version> -->
     <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
     <wagon.version>3.5.3</wagon.version>
 
@@ -154,8 +155,12 @@
     </repository>
     -->
     <snapshotRepository>
+      <id>central</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+      <!--
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      -->
     </snapshotRepository>
     <site>
       <id>bremersee-sites</id>
@@ -621,6 +626,7 @@
           <artifactId>wagon-maven-plugin</artifactId>
           <version>${wagon-maven-plugin.version}</version>
         </plugin>
+        <!--
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -630,6 +636,16 @@
             <serverId>ossrh</serverId>
             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          </configuration>
+        </plugin>
+        -->
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
           </configuration>
         </plugin>
       </plugins>
@@ -841,10 +857,21 @@
             </executions>
           </plugin>
           <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>${central-publishing-maven-plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+              <publishingServerId>central</publishingServerId>
+            </configuration>
+          </plugin>
+          <!--
+          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>${nexus-staging-maven-plugin.version}</version>
           </plugin>
+          -->
         </plugins>
       </build>
     </profile>
