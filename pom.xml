@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>3.2.0</version>
+  <version>3.2.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -91,7 +91,6 @@
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
     <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <!-- <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version> -->
     <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
     <wagon.version>3.5.3</wagon.version>
 
@@ -155,12 +154,8 @@
     </repository>
     -->
     <snapshotRepository>
-      <id>central</id>
+      <id>central-sonatype-snapshots</id>
       <url>https://central.sonatype.com/repository/maven-snapshots/</url>
-      <!--
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      -->
     </snapshotRepository>
     <site>
       <id>bremersee-sites</id>
@@ -313,12 +308,12 @@
   </dependencyManagement>
 
   <dependencies>
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok.version}</version>
-        <optional>true</optional>
-      </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <optional>true</optional>
+    </dependency>
     <dependency>
       <groupId>org.immutables</groupId>
       <artifactId>value</artifactId>
@@ -626,19 +621,6 @@
           <artifactId>wagon-maven-plugin</artifactId>
           <version>${wagon-maven-plugin.version}</version>
         </plugin>
-        <!--
-        <plugin>
-          <groupId>org.sonatype.plugins</groupId>
-          <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin.version}</version>
-          <extensions>true</extensions>
-          <configuration>
-            <serverId>ossrh</serverId>
-            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-          </configuration>
-        </plugin>
-        -->
         <plugin>
           <groupId>org.sonatype.central</groupId>
           <artifactId>central-publishing-maven-plugin</artifactId>
@@ -863,15 +845,10 @@
             <extensions>true</extensions>
             <configuration>
               <publishingServerId>central</publishingServerId>
+              <autoPublish>true</autoPublish>
+              <waitUntil>published</waitUntil>
             </configuration>
           </plugin>
-          <!--
-          <plugin>
-            <groupId>org.sonatype.plugins</groupId>
-            <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>${nexus-staging-maven-plugin.version}</version>
-          </plugin>
-          -->
         </plugins>
       </build>
     </profile>
