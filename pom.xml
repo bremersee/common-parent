@@ -6,7 +6,7 @@
 
   <groupId>org.bremersee</groupId>
   <artifactId>common-parent</artifactId>
-  <version>3.1.2</version>
+  <version>3.2.0</version>
   <packaging>pom</packaging>
 
   <name>common-parent</name>
@@ -38,71 +38,73 @@
 
     <product.vendor>bremersee.org</product.vendor>
 
-    <spring-boot.version>3.3.6</spring-boot.version>
-    <spring-boot-admin.version>3.3.5</spring-boot-admin.version>
-    <spring-cloud.version>2023.0.3</spring-cloud.version>
-    <testcontainers.version>1.19.8</testcontainers.version>
-
-    <commons-io.version>2.16.1</commons-io.version>
+    <spring-boot.version>3.4.7</spring-boot.version>
+    <spring-boot-admin.version>3.4.7</spring-boot-admin.version>
+    <spring-cloud.version>2024.0.1</spring-cloud.version>
+    <testcontainers.version>1.20.6</testcontainers.version>
+    <commons-io.version>2.19.0</commons-io.version>
     <dataurl.version>2.0.0</dataurl.version>
     <embedded-redis.version>1.4.3</embedded-redis.version>
-    <hibernate-orm.version>6.5.3.Final</hibernate-orm.version>
-    <immutables.version>2.10.1</immutables.version>
-    <javers.version>7.7.0</javers.version>
-    <ldaptive.version>2.3.2</ldaptive.version>
-    <lombok.version>1.18.36</lombok.version>
+    <flapdoodle.embed.mongo.version>4.11.0</flapdoodle.embed.mongo.version>
+    <hibernate-orm.version>6.6.18.Final</hibernate-orm.version>
+    <immutables.version>2.11.0</immutables.version>
+    <javers.version>7.8.0</javers.version>
+    <ldaptive.version>2.4.1</ldaptive.version>
+    <lombok.version>1.18.38</lombok.version>
     <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     <mapstruct.version>1.6.3</mapstruct.version>
-    <minio.version>8.5.13</minio.version>
+    <minio.version>8.5.17</minio.version>
     <mock-server.version>5.15.0</mock-server.version>
+    <okhttp3.version>4.12.0</okhttp3.version>
     <passay.version>1.6.6</passay.version>
     <reflections.version>0.10.2</reflections.version>
-    <springdoc.version>2.6.0</springdoc.version>
-    <swagger-annotations-v3.version>2.2.25</swagger-annotations-v3.version>
+    <springdoc.version>2.8.9</springdoc.version>
+    <swagger-annotations-v3.version>2.2.34</swagger-annotations-v3.version>
 
     <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
 
     <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-    <buildnumber-maven-plugin.version>3.1.0</buildnumber-maven-plugin.version>
+    <buildnumber-maven-plugin.version>3.2.1</buildnumber-maven-plugin.version>
+    <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
     <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
     <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
-    <maven-checkstyle-plugin.version>3.4.0</maven-checkstyle-plugin.version>
+    <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>3.4.0</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-    <maven-dependency-plugin.version>3.7.1</maven-dependency-plugin.version>
-    <maven-deploy-plugin.version>3.1.2</maven-deploy-plugin.version>
+    <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
+    <maven-deploy-plugin.version>3.1.3</maven-deploy-plugin.version>
     <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
-    <maven-failsafe-plugin.version>3.3.0</maven-failsafe-plugin.version>
-    <maven-gpg-plugin.version>3.2.4</maven-gpg-plugin.version>
-    <maven-help-plugin.version>3.4.1</maven-help-plugin.version>
-    <maven-install-plugin.version>3.1.2</maven-install-plugin.version>
-    <maven-invoker-plugin.version>3.7.0</maven-invoker-plugin.version>
+    <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>
+    <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+    <maven-help-plugin.version>3.5.1</maven-help-plugin.version>
+    <maven-install-plugin.version>3.1.3</maven-install-plugin.version>
+    <maven-invoker-plugin.version>3.8.1</maven-invoker-plugin.version>
     <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-    <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
     <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
     <!-- git clone doesn't work with version 3.3.0, pub-key error -->
     <maven-scm-publish-plugin.version>3.2.1</maven-scm-publish-plugin.version>
     <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
-    <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
+    <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
     <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
     <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-    <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
+    <!-- <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version> -->
     <wagon-maven-plugin.version>2.0.2</wagon-maven-plugin.version>
     <wagon.version>3.5.3</wagon.version>
 
     <!-- reporting -->
-    <jdepend-maven-plugin.version>2.0</jdepend-maven-plugin.version>
-    <maven-jxr-plugin.version>3.4.0</maven-jxr-plugin.version>
-    <maven-pmd-plugin.version>3.23.0</maven-pmd-plugin.version>
-    <pmd.version>7.3.0</pmd.version>
-    <maven-project-info-reports-plugin.version>3.6.1</maven-project-info-reports-plugin.version>
-    <maven-surefire-report-plugin.version>3.3.0</maven-surefire-report-plugin.version>
+    <jdepend-maven-plugin.version>2.1</jdepend-maven-plugin.version>
+    <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
+    <maven-pmd-plugin.version>3.26.0</maven-pmd-plugin.version>
+    <pmd.version>7.15.0</pmd.version>
+    <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
+    <maven-surefire-report-plugin.version>3.5.2</maven-surefire-report-plugin.version>
 
     <check-style-location>google_checks.xml</check-style-location>
-    <checkstyle.version>10.20.1</checkstyle.version>
+    <checkstyle.version>10.26.1</checkstyle.version>
 
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -153,8 +155,12 @@
     </repository>
     -->
     <snapshotRepository>
+      <id>central</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+      <!--
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      -->
     </snapshotRepository>
     <site>
       <id>bremersee-sites</id>
@@ -201,11 +207,24 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-bom</artifactId>
+        <version>${okhttp3.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
       <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.flapdoodle.embed</groupId>
+        <artifactId>de.flapdoodle.embed.mongo.spring30x</artifactId>
+        <version>${flapdoodle.embed.mongo.version}</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.javers</groupId>
@@ -580,7 +599,6 @@
           <version>${jacoco-maven-plugin.version}</version>
           <configuration>
             <destFile>${project.build.directory}/coverage-reports/jacoco.exec</destFile>
-            <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile>
           </configuration>
           <executions>
             <execution>
@@ -608,6 +626,7 @@
           <artifactId>wagon-maven-plugin</artifactId>
           <version>${wagon-maven-plugin.version}</version>
         </plugin>
+        <!--
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -617,6 +636,16 @@
             <serverId>ossrh</serverId>
             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+          </configuration>
+        </plugin>
+        -->
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>${central-publishing-maven-plugin.version}</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
           </configuration>
         </plugin>
       </plugins>
@@ -828,10 +857,21 @@
             </executions>
           </plugin>
           <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>${central-publishing-maven-plugin.version}</version>
+            <extensions>true</extensions>
+            <configuration>
+              <publishingServerId>central</publishingServerId>
+            </configuration>
+          </plugin>
+          <!--
+          <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
             <version>${nexus-staging-maven-plugin.version}</version>
           </plugin>
+          -->
         </plugins>
       </build>
     </profile>
